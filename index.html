@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>
+		NY Waterfront+
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="jquery/jquery.mobile-1.1.1.css" type="text/css">
+		<script type="text/javascript" src="jquery/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="jquery/jquery.mobile-1.1.1.min.js"></script>
+		<link rel="stylesheet" href="mainpage.css" type="text/css">
+		
+		<script type="text/javascript" src="events/mapDataLoading.js"></script>
+		<script type="text/javascript" src="events/eventDisplay.js"></script>
+		
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places"></script>
+		<script type="text/javascript" src="jquery_maps_plugin/min/jquery.ui.map.full.min.js"></script>
+		
+		<script type="text/javascript" src="maps/maps.js"></script>
+		<script type="text/javascript" src="newsPage.js"></script>
+	</head>
+	<body>
+	<div data-role="page">
+		<div data-role="header"><h1>NY Waterfront+</h1></div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="maps/maps.html" id="maps_button"><img style="width: 100%;" src="images/maps_icon.png"/></a>
+					<a href="news.html"><img style="width: 100%;" src="images/news_icon.png"/></a>
+				</div>
+				<div class="ui-block-b">
+					<a href="events/events.html" id="event_button"><img style="width: 100%;" src="images/calander_icon.png"/></a>
+					<a href="about.html"><img style="width: 100%;" src="images/facebook_icon.png"/></a>
+				</div>
+			</div><!-- /grid-a -->
+		<div data-role="footer" style="text-align:center"><img src="images/footer_logo.png"></div>
+		
+		<script type="text/javascript">
+			$('#event_page').live('pageshow',function(event){
+				displayEventData();
+			});
+			
+			$('#about_page').live('pageshow',function(event){
+				$('body').css({'height' : $('#about_page').height()});
+			});
+			
+			$('#event_listing_page').live('pageshow',function(event){
+				initEventListingPage();
+			});
+			
+			$('#map_page').live('pageshow',function(event){
+				initMapsPage();
+			});
+			
+			$('#news_page').live('pageshow',function(event){
+				initNewsPage();
+			});
+			
+			
+		</script>
+	</div>
+	</body>
+</html>

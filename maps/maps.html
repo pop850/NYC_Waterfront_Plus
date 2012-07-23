@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>NYC Waterfront Map</title>
+</head>
+<body>
+	<div data-role="page" id="map_page">
+		<div data-role="content" style="padding: 0px">
+			<div id="map_loading_message" style="position:absolute; top:10px; left:10px">Loading map...</div>
+			<div id="map_canvas" style="width:100%"></div>
+		
+			<fieldset data-role="controlgroup" data-type="horizontal" style="position:absolute; bottom:0px;">
+				<legend></legend>
+				<input type="checkbox" name="r-check" id="r-check" class="custom"/>
+				<label for="r-check">Food</label>
+				
+				<input type="checkbox" name="e-check" id="e-check" class="custom" checked="checked"/>
+				<label for="e-check">Events</label>
+
+				<input type="checkbox" name="t-check" id="t-check" class="custom" />
+				<label for="t-check">Ferries</label>    
+			</fieldset>
+		</div>
+	</div>
+	
+</body>
+</html>
